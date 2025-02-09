@@ -1,5 +1,12 @@
-title: Leap Day theme
-description: Leap Day is a theme for GitHub Pages.
+encoding: utf-8
+lang: zh-CN
+title: CCC 2025 青岛
+description: The Ninth Symposium on Coding Theory, Cryptography and Combinatorics 
 show_downloads: true
+markdown: kramdown
+kramdown:
+  auto_ids: false
+  toc_levels: 1..6
+  header_offset: 0
 google_analytics:
 theme: jekyll-theme-leap-day
