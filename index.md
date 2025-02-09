@@ -78,14 +78,14 @@ end
 *   Item baz
 *   Item zip
 
-### And an ordered list:
+ And an ordered list:
 
 1.  Item one
 1.  Item two
 1.  Item three
 1.  Item four
 
-### And a nested list:
+ And a nested list:
 
 - level 1 item
   - level 2 item
@@ -101,16 +101,16 @@ end
   - level 2 item
 - level 1 item
 
-### Small image
+ Small image
 
 ![Octocat](https://github.githubassets.com/images/icons/emoji/octocat.png)
 
-### Large image
+ Large image
 
 ![Branching](https://guides.github.com/activities/hello-world/branching.png)
 
 
-### Definition lists can be used with HTML syntax.
+ Definition lists can be used with HTML syntax.
 
 <dl>
 <dt>Name</dt>
