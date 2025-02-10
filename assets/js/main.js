@@ -1,24 +1,15 @@
-var sectionHeight = function() {
-  var total    = $(window).height(),
-      $section = $('section').css('height','auto');
+$(document).ready(function() {
+  // 清空导航栏，避免重复添加
+  $("nav ul").empty();
 
-  if ($section.outerHeight(true) < total) {
-    var margin = $section.outerHeight(true) - $section.height();
-    $section.height(total - margin - 20);
-  } else {
-    $section.css('height','auto');
-  }
-}
-
-$(window).resize(sectionHeight);
-
-$(function() {
-  $("section h1, section h2, section h3").each(function(){
-    $("nav ul").append("<li class='tag-" + this.nodeName.toLowerCase() + "'><a href='#" + $(this).text().toLowerCase().replace(/ /g, '-').replace(/[^\w-]+/g,'') + "'>" + $(this).text() + "</a></li>");
-    $(this).attr("id",$(this).text().toLowerCase().replace(/ /g, '-').replace(/[^\w-]+/g,''));
-    $("nav ul li:first-child a").parent().addClass("active");
+  // 遍历所有的 h1, h2, h3 标签，生成导航栏项并为每个标题设置 id
+  $("section h1, section h2, section h3").each(function(index) {
+    var id = $(this).text().toLowerCase().replace(/ /g, '-').replace(/[^\w-]+/g,'') + '-' + index;
+    $("nav ul").append("<li class='tag-" + this.nodeName.toLowerCase() + "'><a href='#" + id + "'>" + $(this).text() + "</a></li>");
+    $(this).attr("id", id);
   });
 
+  // 滚动到相应的位置，并高亮当前激活的导航项
   $("nav ul li").on("click", "a", function(event) {
     var position = $($(this).attr("href")).offset().top - 190;
     $("html, body").animate({scrollTop: position}, 400);
@@ -28,6 +19,35 @@ $(function() {
   });
 
   sectionHeight();
-
   $('img').on('load', sectionHeight);
+
+  // 返回顶部按钮的显示和隐藏
+  $(window).scroll(function() {
+    if ($(this).scrollTop() > 200) {
+      $('#back-to-top').fadeIn(300); // 缓慢显示
+    } else {
+      $('#back-to-top').fadeOut(300); // 缓慢隐藏
+    }
+  });
+
+  // 点击返回顶部按钮
+  $('#back-to-top').click(function() {
+    $('html, body').animate({ scrollTop: 0 }, 400);
+    return false;
+  });
 });
+
+// 动态调整 section 高度
+var sectionHeight = function() {
+  var total = $(window).height(),
+      $section = $('section').css('height','auto');
+
+  if ($section.outerHeight(true) < total) {
+    var margin = $section.outerHeight(true) - $section.height();
+    $section.height(total - margin - 20);
+  } else {
+    $section.css('height','auto');
+  }
+};
+
+$(window).resize(sectionHeight);

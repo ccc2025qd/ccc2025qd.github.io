@@ -1,12 +1,15 @@
 encoding: utf-8
 lang: zh-CN
-title: CCC 2025 青岛
-description: The Ninth Symposium on Coding Theory, Cryptography and Combinatorics 
-show_downloads: true
+title: 第九届编码密码组合研讨会
+description:  The Ninth Symposium on Coding Theory, Cryptography and Combinatorics
+show_downloads: false
 markdown: kramdown
 kramdown:
-  auto_ids: false
-  toc_levels: 1..6
-  header_offset: 0
+  input: GFM
+  auto_ids: true  # 启用自动生成ID
+  toc_levels: 1..4  # 调整目录层级范围
+  header_offset: 1  # 设置标题的偏移量，以便更好地显示目录
+
 google_analytics:
-theme: jekyll-theme-leap-day
+sass:
+  style: compressed

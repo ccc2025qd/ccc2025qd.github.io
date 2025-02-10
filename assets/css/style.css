@@ -1,0 +1,212 @@
+/* 页面整体样式 */
+body {
+    font-family: 'Open Sans', sans-serif;  /* 使用Google字体Open Sans */
+    background-color: #f4f4f9;            /* 背景色 */
+    color: #333;                          /* 字体颜色 */
+    margin: 0;
+    padding: 0;
+    padding-bottom: 100px; /* 留出空间给固定的页脚 */
+}
+
+/* 导航栏 */
+nav {
+    background-color: #003366;            /* CCC 会议的蓝色 */
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;                        /* 确保导航栏位于最上层 */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);  /* 增加更明显的阴影效果 */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 25px;  /* 增加间距 */
+}
+
+nav ul li a {
+    color: #FFD700;                       /* 黄色 */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.5vw;                       /* 使用视口宽度单位，字体大小随页面宽度变化 */
+    padding: 1.5vw 1.5vw;                  /* 按钮内边距，使用视口宽度单位 */
+    transition: all 0.3s ease;            /* 添加过渡效果 */
+    border-radius: 5px;                   /* 增加圆角效果 */
+}
+
+nav ul li a:hover {
+    color: #FFFFFF;                       /* hover效果：变为白色 */
+    background-color: #00509E;            /* 背景变为深蓝色 */
+}
+
+/* 页脚样式 */
+footer {
+    text-align: center;
+    background-color: #003366;            /* 与导航栏保持一致的蓝色 */
+    color: #fff;
+    padding: 15px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.15);  /* 增加阴影效果 */
+}
+
+/* 头部横幅 */
+#banner {
+    background-color: transparent;            /* 蓝色背景并加透明度 */
+    text-align: center;
+    padding: 60px 0;
+    color: white;
+    background-image: url('/assets/img/logo.png');  /* 添加背景图片 */
+    background-size: cover;  /* 背景覆盖整个区域 */
+    background-position: center;  /* 背景居中 */
+    min-height: 15vw;  /* 高度设置为视口宽度的 30% */
+}
+#banner img {
+    width: 100%;             /* 让图片宽度充满容器 */
+    height: auto;            /* 高度自动调整，保持图片比例 */
+    max-height: 400px;       /* 限制图片最大高度，避免图片过大 */
+    object-fit: cover;       /* 保证图片不被拉伸，覆盖容器区域 */
+    border-radius: 10px;     /* 圆角边框 */
+}
+#banner h1 {
+    font-size: 2.8rem;  /* 适当缩小标题文字大小 */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);  /* 添加文字阴影 */
+    margin-bottom: 20px;
+}
+#banner p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+/* 页面主标题 */
+header h1 {
+    text-align: center;                  /* 标题居中 */
+    font-size: 3rem;                     /* 标题大小 */
+    margin-top: 20px;
+    color: #003366;                      /* 主标题颜色 */
+}
+
+header p {
+    text-align: center;                  /* 描述文字居中 */
+    font-size: 1.2rem;
+    color: #555;                         /* 描述文字颜色 */
+}
+/* 针对section中的标题 */
+section h1, section h2, section h3 {
+    padding-left: 10px;  /* 给每个section标题添加左边距 */
+}
+/* 返回顶部按钮 */
+#back-to-top {
+    position: fixed;
+    bottom: 10px;
+    right: 20px;
+    background-color: #FFD700;            /* 黄色按钮 */
+    border: none;
+    padding: 15px;
+    border-radius: 50%;
+    font-size: 2rem;
+    cursor: pointer;
+    display: none;                         /* 初始时隐藏按钮 */
+}
+
+#back-to-top:hover {
+    background-color: #0f7dea;            /* hover时变为蓝色 */
+    color: #fff;
+}
+
+html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center; /* 垂直居中 */
+    align-items: flex-start; /* 居中对齐内容 */
+}
+.container {
+    width: 90%;                      /* 设置容器宽度为 90% */
+    max-width: 1200px;               /* 最大宽度为 1200px，确保内容不会过宽 */
+    margin: 0 auto;                  /* 水平居中对齐 */
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.15);
+    box-sizing: border-box;          /* 确保padding不影响宽度计算 */
+}
+
+.container h2 {
+    font-size: 2.5rem;               /* 主标题稍大 */
+    color: #003366;
+    margin-bottom: 20px;
+}
+
+/* 链接样式 */
+a {
+    color: #003366;                        /* 链接文字的蓝色 */
+    text-decoration: none;
+}
+
+a:hover {
+    color: #FFD700;                        /* 链接hover时变为黄色 */
+}
+
+/* 优化表格 */
+table {
+    width: 80%;
+    max-width: 1500px; /* 设置表格的最大宽度 */
+    margin: 0 auto; /* 使表格水平居中 */
+    border-collapse: collapse; /* 合并边框 */
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #003366;
+    color: #fff;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    #banner {
+        padding: 40px 0;
+        min-height: 300px; /* 设置最小高度 */
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .sidebar {
+        width: 100%;
+        position: relative;
+        margin-top: 20px;
+    }
+
+    main {
+        margin-left: 0;
+    }
+
+    #back-to-top {
+        font-size: 1.5rem;
+    }
+
+    .container {
+        width: 95%;
+        margin-left: 5%;
+    }
+}
