@@ -3,7 +3,6 @@ lang: zh-CN
 show_downloads: false
 markdown: kramdown
 title: 
-description:  
 kramdown:
   input: GFM
   auto_ids: true  # 启用自动生成ID
