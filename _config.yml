@@ -1,7 +1,5 @@
 encoding: utf-8
-lang: zh-CN
-title: 第九届编码密码组合研讨会
-description:  The Ninth Symposium on Coding Theory, Cryptography and Combinatorics
+lang: zh-CN  
 show_downloads: false
 markdown: kramdown
 kramdown:

@@ -13,6 +13,17 @@ var sectionHeight = function() {
 $(window).resize(sectionHeight);
 
 $(function() {
+  // 获取侧边栏和按钮
+  const menuToggle = document.querySelector('.menu-toggle');
+  const nav = document.querySelector('nav');
+
+  // 绑定侧边栏显示/隐藏事件
+  if (menuToggle) {
+    menuToggle.addEventListener('click', () => {
+      nav.classList.toggle('open');  // 切换侧边栏的显示与隐藏
+    });
+  }
+
   // 清空导航栏，避免重复添加
   $("nav ul").empty();
 
@@ -35,6 +46,7 @@ $(function() {
   sectionHeight();
   $('img').on('load', sectionHeight);
 });
+
 
 $(function() {
   // 检查用户滚动的位置，显示或隐藏 "Back to Top" 按钮
