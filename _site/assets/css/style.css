@@ -4,11 +4,15 @@ body {
     background-color: #f4f4f9;            /* 背景色 */
     color: #333;                          /* 字体颜色 */
     margin: 0;
-    padding: 20px;
+    padding: 0px;
     padding-bottom: 100px; /* 留出空间给固定的页脚 */
     overflow-x: hidden;
 }
-
+/* 样式设置：正文部分容器 */
+.wrapper section {
+    max-width: 80%;
+    margin: 0 auto;     /* 居中显示 */
+  }
 /* 导航栏 */
 nav {
     background-color: rgba(0, 51, 102, 0.9);            /* CCC 会议的蓝色 */
