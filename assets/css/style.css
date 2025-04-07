@@ -174,7 +174,8 @@ th {
 
 /* 响应式设计 */
 
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
+
     /* 调整导航栏 */
     nav {
         padding: 10px 0;           /* 减少上下内边距 */
@@ -193,7 +194,7 @@ th {
     }
 
     nav ul li a {
-        font-size: 1rem;           /* 缩小字体大小 */
+        font-size: 1.5vw;           /* 缩小字体大小 */
         padding: 5px 10px;         /* 减小按钮内边距 */
         display: block;            /* 确保链接区域足够大 */
         text-align: center;        /* 文字居中 */
@@ -222,3 +223,10 @@ th {
     }
 }
 
+@media (max-width: 700px) {
+    #banner {
+        background-size: contain; /* 小屏幕完整显示图片 */ 
+        background-repeat: no-repeat;
+        min-height: 23vw; 
+    }
+}
