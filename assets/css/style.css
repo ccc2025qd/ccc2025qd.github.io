@@ -6,6 +6,7 @@ body {
     margin: 0;
     padding: 20px;
     padding-bottom: 100px; /* 留出空间给固定的页脚 */
+    overflow-x: hidden;
 }
 
 /* 导航栏 */
